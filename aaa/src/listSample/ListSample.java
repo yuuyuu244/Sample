@@ -3,6 +3,16 @@ package listSample;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * List Controller.
+ *
+ * to confilm java8 writing.
+ * java8ってどんな書き方できるか確かめたいやん.
+ * そろそろjava9でるらしいけどなwwwww
+ *
+ * @author yuki
+ *
+ */
 public class ListSample {
 	public static void main (String[] args) {
 		ListSample ls = new ListSample();
@@ -17,23 +27,44 @@ public class ListSample {
 		ls.lambda2_3(list2);
 	}
 
+	/**
+	 * メソッド参照ってどんな感じやねん.
+	 * って確かめたいねん...
+	 *
+	 * @param list Strin型を格納したリスト.
+	 */
 	public void methodReference(List<String> list) {
 		System.out.println("---------- start methodReference method ----------");
 		list.forEach(System.out::print);
 
 	}
 
+	/**
+	 * String型を格納するListを
+	 * lambda式でどんな感じで再現できるかチャレンジ!!.
+	 * @param list Strin型を格納したリスト.
+	 */
 	public void lambda1 (List<String> list) {
 		System.out.println("---------- start lambda1 method ----------");
 		list.forEach((String word)->System.out.println(word));
 	}
 
+	/**
+	 * String型を格納するListを
+	 * lambda式でどんな感じで再現できるかチャレンジ!!.
+	 * @param list Strin型を格納したリスト.
+	 */
 	public void lambda1_2 (List<String> list) {
 		System.out.println("---------- start lambda1_2 method ----------");
 		list.forEach(word -> System.out.println(word));
 
 	}
 
+	/**
+	 * 独自クラスを格納するListを
+	 * lambda式でどんなかんじで再現できるかチャレンジ!!.
+	 * @param list 独自クラスを格納するList
+	 */
 	public void lambda2 (List<OwnBean> list) {
 		System.out.println("---------- start lambda2 method ----------");
 		list.forEach((OwnBean own)->System.out.println(own.getWord()));
